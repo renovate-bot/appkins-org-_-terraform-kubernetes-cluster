@@ -1,0 +1,19 @@
+kind: Issuer
+metadata:
+  name: letsencrypt-prod-wildcard
+  namespace: default
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: var.cloudflare.email
+    privateKeySecretRef:
+      name: letsencrypt-prod-wildcard
+    dns01:
+      providers:
+      - name: cf-dns
+        cloudflare:
+          email: myimail@gmail.com
+          # A secretKeyRef to a cloudflare api key
+          apiKeySecretRef:
+            name: cloudflare-api-key
+            key: api-key.txt
