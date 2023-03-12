@@ -15,6 +15,10 @@ resource "terraform_data" "install" {
   }
 }
 
+###
+# CA Certificate
+# ? Replaces existing CA to be managed by Terraform
+###
 resource "tls_private_key" "ca" {
   algorithm = "RSA"
   rsa_bits  = 4096

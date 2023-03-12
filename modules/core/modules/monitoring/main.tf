@@ -1,3 +1,9 @@
+resource "kubernetes_namespace" "monitoring" {
+  metadata {
+    name = "monitoring"
+  }
+}
+
 resource "helm_release" "prometheus_stack" {
   name      = "prometheus-stack"
   namespace = "monitoring"

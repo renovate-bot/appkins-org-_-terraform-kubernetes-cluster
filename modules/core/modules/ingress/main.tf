@@ -1,3 +1,9 @@
+resource "kubernetes_namespace" "nginx" {
+  metadata {
+    name = local.namespace
+  }
+}
+
 resource "kubectl_manifest" "certificate" {
   yaml_body = yamlencode(local.certificate)
   wait      = true
