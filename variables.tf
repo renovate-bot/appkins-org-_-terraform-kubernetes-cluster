@@ -5,6 +5,15 @@ variable "cluster_id" {
   nullable    = false
 }
 
+variable "ssh" {
+  type = object({
+    user     = optional(string, "root")
+    password = string
+    host     = string
+  })
+  description = "SSH credentials for the cluster host."
+}
+
 variable "cloudflare" {
   type = object({
     api_key = string

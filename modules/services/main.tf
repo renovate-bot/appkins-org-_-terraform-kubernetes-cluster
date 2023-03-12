@@ -1,5 +1,5 @@
 module "vault" {
-  source     = "./modules/vault"
+  source = "./modules/vault"
 }
 
 module "argocd" {

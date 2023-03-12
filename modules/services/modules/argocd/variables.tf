@@ -140,20 +140,20 @@ variable "applicationsets" {
 variable "extensions" {
   description = "tpl"
   type = list(object({
-      additionalAnnotations = optional(map(string))
-      additionalLabels      = optional(map(string))
-      name                  = string
-      namespace             = string
-      sources = list(
-        object({
-          git = optional(object({
-            url = string
-          }))
-          web = optional(object({
-            url = string
-          }))
-        })
-      )
+    additionalAnnotations = optional(map(string))
+    additionalLabels      = optional(map(string))
+    name                  = string
+    namespace             = string
+    sources = list(
+      object({
+        git = optional(object({
+          url = string
+        }))
+        web = optional(object({
+          url = string
+        }))
+      })
+    )
     })
   )
   default = []

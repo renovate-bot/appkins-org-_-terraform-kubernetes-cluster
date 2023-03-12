@@ -1,9 +1,9 @@
 module "cert_manager" {
   # Create a certificate manager module
-  source     = "./modules/cert-manager"
-  zone = var.cloudflare.domain
+  source = "./modules/cert-manager"
+  zone   = var.cloudflare.domain
 
-  email = var.cloudflare.email
+  email      = var.cloudflare.email
   cloudflare = var.cloudflare
 }
 

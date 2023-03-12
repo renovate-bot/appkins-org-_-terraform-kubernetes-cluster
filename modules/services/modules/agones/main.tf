@@ -5,11 +5,11 @@ resource "kubernetes_namespace" "agones" {
 }
 
 resource "helm_release" "agones" {
-  name             = "agones"
-  repository       = "https://agones.dev/chart/stable"
-  chart            = "agones"
-  version          = var.chart_version
-  namespace        = "agones-system"
+  name       = "agones"
+  repository = "https://agones.dev/chart/stable"
+  chart      = "agones"
+  version    = var.chart_version
+  namespace  = "agones-system"
 
 
   set {

@@ -1,5 +1,5 @@
 variable "email" {
-  type = string
+  type        = string
   description = "Email for use with letsencrypt."
 }
 
