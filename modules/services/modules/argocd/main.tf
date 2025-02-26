@@ -170,7 +170,7 @@ resource "helm_release" "workflows" {
 
   repository = "https://argoproj.github.io/argo-helm"
   chart      = "argo-workflows"
-  version    = "0.22.8"
+  version    = "0.45.8"
 
   values = [yamlencode({
     server = {
